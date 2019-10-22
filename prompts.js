@@ -5,12 +5,12 @@ module.exports = [
         message: 'Please pick a preset',
         choices: [
             {
-                name: '默认模板',
-                value: 'default'
+                name: 'ionic-vue',
+                value: 'ionic-vue'
             },
             {
-                name: '默认模板(TypeScript)',
-                value: 'default-ts'
+                name: 'ionic-vue-tabs',
+                value: 'ionic-vue-tabs'
             }
         ],
         default: 'None'
