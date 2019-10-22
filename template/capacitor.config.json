@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.app",
+  "appName": "vue-ion-skeleton",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist"
+}
