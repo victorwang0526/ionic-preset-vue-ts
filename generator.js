@@ -26,15 +26,13 @@ module.exports = (api, options, rootOptions) => {
         './ionic.config.json' : './template/ionic.config.json',
     });
 
-    if (options.template === 'ionic-vue') {
+    if (options.template === 'ionic-vue' || options.template === 'ionic-vue-tabs') {
         console.log('choose ionic-vue')
         // 复制并用 ejs 渲染 `./template` 内所有的文件
         api.render('./template/ionic-vue')
-    } else if (options.template === 'ionic-vue-tabs') {
-        console.log('choose ionic-vue-tabs')
-        // 复制并用 ejs 渲染 `./template` 内所有的文件
-        // api.render('./template/ionic-vue-tabs')
+
+        if(options.template === 'ionic-vue-tabs') {
+            api.render('./template/ionic-vue-tabs')
+        }
     }
-
-
 }
