@@ -1,5 +1,5 @@
 {
-  "name": "vue-ion-skeleton",
+  "name": "<%= options.appName %>",
   "integrations": {},
   "type": "vue"
 }

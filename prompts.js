@@ -1,5 +1,17 @@
 module.exports = [
     {
+        type: 'input',
+        name: 'appId',
+        message: 'input a appId',
+        default: 'com.example.app'
+    },
+    {
+        type: 'input',
+        name: 'appName',
+        message: 'input a appName',
+        default: 'ionic-vue-app'
+    },
+    {
         type: 'list',
         name: 'template',
         message: 'Please pick a preset',
