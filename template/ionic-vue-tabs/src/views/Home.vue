@@ -49,11 +49,9 @@ export default class Home extends Vue{
     }
 
     beforeTabChange() {
-        console.log('beforeTabChange...')
     }
 
     afterTabChange() {
-        console.log('afterTabChange...')
     }
 }
 </script>
