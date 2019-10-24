@@ -1,4 +1,3 @@
-// @ts-ignore
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -21,8 +20,8 @@ addIcons({
 Vue.use(IonicVue);
 
 Vue.config.productionTip = false
+Vue.config.ignoredElements = [/^ion-/]
 
-// @ts-ignore
 new Vue({
   router,
   render: h => h(App)
