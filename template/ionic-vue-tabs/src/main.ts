@@ -5,6 +5,7 @@ import router from './router'
 import IonicVue from '@ionic/vue';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
+import { defineCustomElements } from '@ionic/pwa-elements/loader'; // add this line
 
 import { addIcons } from "ionicons";
 import { construct, home } from "ionicons/icons";
@@ -21,6 +22,7 @@ Vue.use(IonicVue);
 
 Vue.config.productionTip = false
 Vue.config.ignoredElements = [/^ion-/]
+defineCustomElements(window);  // add this line
 
 new Vue({
   router,

@@ -6,6 +6,7 @@ module.exports = (api, options, rootOptions) => {
             "@capacitor/cli": "^1.2.1",
             "@capacitor/core": "^1.2.1",
             "@capacitor/ios": "^1.2.1",
+            "@ionic/pwa-elements": "^1.4.1",
             "ionicons": "^4.6.3",
         },
         devDependencies: {
