@@ -10,7 +10,7 @@ js: https://github.com/victorwang0526/ionic-preset-vue
 
 ## Install
 
-> vue create -p victorwang0526/ionic-preset-vue my-project
+> vue create -p victorwang0526/ionic-preset-vue-ts my-project
 
 ### build dist first
 
