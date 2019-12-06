@@ -1,9 +1,18 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <router-link :to="'/about'">
-      <ion-button>About</ion-button>
-    </router-link>
+    <div>
+      <img alt="Vue logo" src="../assets/logo.png">
+    </div>
+    <div>
+      <router-link :to="'/about'">
+        <ion-button>About</ion-button>
+      </router-link>
+    </div>
+    <div>
+      <router-link to="/about">
+        <van-button type="primary">Vant Button</van-button>
+      </router-link>
+    </div>
   </div>
 </template>
 
