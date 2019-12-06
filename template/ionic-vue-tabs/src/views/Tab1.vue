@@ -7,8 +7,13 @@
             </ion-toolbar>
         </ion-header>
         <ion-content padding>
-            <ion-label>hello</ion-label>
-            <ion-button @click="nextPage()">Next Page</ion-button>
+            <div>
+                <ion-button @click="nextPage()">Ionic Button</ion-button>
+            </div>
+
+            <router-link to="/about">
+                <van-button type="primary">Vant Button</van-button>
+            </router-link>
         </ion-content>
     </ion-page>
 </template>

@@ -8,10 +8,12 @@ module.exports = (api, options, rootOptions) => {
             "@capacitor/ios": "^1.2.1",
             "@ionic/pwa-elements": "^1.4.1",
             "ionicons": "^4.6.3",
+            "vant": "^2.2.16",
         },
         devDependencies: {
             "@ionic/vue": "0.0.9",
-            "mockjs": "^1.0.1-beta3"
+            "mockjs": "^1.0.1-beta3",
+            "ts-import-plugin": "^1.6.1",
         }
     });
 
