@@ -30,3 +30,14 @@ js: https://github.com/victorwang0526/ionic-preset-vue
 ### sync your app
 
 > npx cap copy
+
+
+## travis
+
+1. create local
+
+> vue create -f -n --preset ../ionic-preset-vue-ts ionic-vue-preset-ts-app
+
+2. push ./ionic-vue-preset-ts-app to github
+
+3. travis auto build the app

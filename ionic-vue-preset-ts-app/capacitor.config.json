@@ -1,0 +1,7 @@
+{
+  "appId": "ionic.vue.preset.ts.app",
+  "appName": "ionic-vue-preset-ts-app",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist"
+}
