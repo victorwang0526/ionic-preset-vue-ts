@@ -35,7 +35,7 @@ matrix:
     - npm install -g ionic @vue/cli
     - yes | sdkmanager "platforms;android-27"
     - cd $TRAVIS_BUILD_DIR
-    - cd ./ionic-vue-ts-preset-app
+    - cd ./ionic-vue-preset-ts-app
     script:
     - npm i
     - npm run build
