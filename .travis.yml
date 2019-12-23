@@ -36,6 +36,7 @@ matrix:
     - npm install -g ionic @vue/cli
     - yes | sdkmanager "platforms;android-27"
     - cd $TRAVIS_BUILD_DIR
+    - gem install fir-cli
     - rm -rf ./release/android/*.apk
     - cd ./ionic-vue-preset-ts-app
     script:
@@ -46,16 +47,19 @@ matrix:
     - ./gradlew aR
     - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -storepass ivtivt -signedjar ../../release/android/app-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
     - cd $TRAVIS_BUILD_DIR
-    before_deploy:
-    - git config --local user.name "victorwang0526"
-    - git config --local user.email "fengxuanwang@qq.com"
-    - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-    - git tag $TRAVIS_TAG
-    deploy:
-      provider: releases
-      skip_cleanup: true
-      api_key: $GH_TOKEN
-      file_glob: true
-      file: "release/android/app-release-signed.apk"
-      on:
-        tags: true
+    - fir login 1a8cdbd33bf403f19177476ca7f5cec0
+    - fir me
+    - fir publish ./release/android/app-release-signed.apk
+#    before_deploy:
+#    - git config --local user.name "victorwang0526"
+#    - git config --local user.email "fengxuanwang@qq.com"
+#    - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+#    - git tag $TRAVIS_TAG
+#    deploy:
+#      provider: releases
+#      skip_cleanup: true
+#      api_key: $GH_TOKEN
+#      file_glob: true
+#      file: "release/android/app-release-signed.apk"
+#      on:
+#        tags: true
