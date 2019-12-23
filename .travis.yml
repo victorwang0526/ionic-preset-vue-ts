@@ -53,9 +53,9 @@ matrix:
     - git tag $TRAVIS_TAG
     deploy:
       provider: releases
-      api_key: $GH_TOKEN
-      file: "release/android/app-release-signed.apk"
       skip_cleanup: true
+      api_key: $GH_TOKEN
+      file_glob: true
+      file: "release/android/app-release-signed.apk"
       on:
-        repo: victorwang0526/ionic-preset-vue-ts
         tags: true
