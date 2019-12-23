@@ -45,9 +45,6 @@ matrix:
     - ./gradlew aR
     - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -storepass ivtivt -signedjar ../../release/android/app-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
     - cd $TRAVIS_BUILD_DIR
-    - cd release
-    - cd android
-    - ls
     before_deploy:
     - git config --local user.name "victorwang0526"
     - git config --local user.email "fengxuanwang@qq.com"
