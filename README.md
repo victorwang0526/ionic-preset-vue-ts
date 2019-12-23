@@ -41,3 +41,11 @@ js: https://github.com/victorwang0526/ionic-preset-vue
 2. push ./ionic-vue-preset-ts-app to github
 
 3. travis auto build the app
+
+### keystore
+
+> keytool -genkey -alias ivt.keystore -keyalg RSA -validity 20000 -keystore ivt.keystore
+
+> keytool -importkeystore -srckeystore ivt.keystore -destkeystore ivt.keystore -deststoretype pkcs12
+
+> ivtivt
