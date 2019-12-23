@@ -1,0 +1,42 @@
+branches:
+  only:
+    - master
+dist: trusty
+matrix:
+  include:
+  - language: node_js
+    node_js:
+      - 10
+  - os: linux
+    sudo: required
+    language: android
+    android:
+      components:
+      - tools
+      - platform-tools
+      - build-tools-26.0.2
+      - android-25
+      - extra-google-google_play_services
+      - extra-google-m2repository
+      - extra-android-m2repository
+    licenses:
+    - android-sdk-preview-license-.+
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+    before_cache:
+    - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+    - rm -f  $HOME/.gradle/caches/transforms-1/transforms-1.lock
+    - rm -rf $HOME/.gradle/caches/3.5/fileHashes/
+    - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+    cache:
+      directories:
+      - "$HOME/.gradle/caches/"
+      - "$HOME/.gradle/wrapper/"
+    before_install:
+    - export LANG=en_US.UTF-8
+    - nvm install 10.15.3
+    - npm install ionic @vue/cli
+    - yes | sdkmanager "platforms;android-27"
+    - cd $TRAVIS_BUILD_DIR
+    script:
+    - ls
