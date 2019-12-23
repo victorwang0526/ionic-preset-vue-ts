@@ -60,6 +60,6 @@ matrix:
       skip_cleanup: true
       api_key: $GH_TOKEN
       file_glob: true
-      file: "release/android/app-release-signed.apk"
+      file: release/android/app-release-signed.apk
       on:
         tags: true
