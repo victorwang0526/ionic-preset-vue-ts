@@ -35,6 +35,7 @@ matrix:
     - npm install -g ionic @vue/cli
     - yes | sdkmanager "platforms;android-27"
     - cd $TRAVIS_BUILD_DIR
+    - rm -rf ./release/android/*.apk
     - cd ./ionic-vue-preset-ts-app
     script:
     - npm i
@@ -42,7 +43,11 @@ matrix:
     - npx cap add android
     - cd android
     - ./gradlew aR
-    - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -storepass ivtivt -signedjar ../../release/android/env.global.APP_NAME-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
+    - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -storepass ivtivt -signedjar ../../release/android/$env.global.APP_NAME-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
+    - cd $TRAVIS_BUILD_DIR
+    - cd release
+    - cd android
+    - ls
 env:
   global:
   - APP_NAME: ionic-vue-preset-ts-app
