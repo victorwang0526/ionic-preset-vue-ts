@@ -1,6 +1,3 @@
-branches:
-  only:
-    - master
 dist: trusty
 matrix:
   include:
@@ -56,7 +53,5 @@ matrix:
       file: "release/android/app-release-signed.apk"
       skip_cleanup: true
       on:
+        repo: victorwang0526/ionic-preset-vue-ts
         tags: true
-env:
-  global:
-  - APP_NAME: ionic-vue-preset-ts-app
