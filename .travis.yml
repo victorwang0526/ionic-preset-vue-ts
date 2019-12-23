@@ -32,9 +32,9 @@ matrix:
     before_install:
     - export LANG=en_US.UTF-8
     - nvm install 10.15.3
-    - npm install ionic @vue/cli
+    - npm install -g ionic @vue/cli
     - yes | sdkmanager "platforms;android-27"
     - cd $TRAVIS_BUILD_DIR
     script:
-    - ls
-    - pwd
+    - cd ..
+    - vue create -f -n --skipGetStarted -p ./ionic-preset-vue-ts ionic-vue-ts-preset-app

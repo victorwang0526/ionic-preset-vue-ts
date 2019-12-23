@@ -3,13 +3,13 @@ module.exports = [
         type: 'input',
         name: 'appId',
         message: 'input a appId',
-        default: 'com.example.app'
+        default: 'ionic.vue.preset.ts.app'
     },
     {
         type: 'input',
         name: 'appName',
         message: 'input a appName',
-        default: 'ionic-vue-app'
+        default: 'ionic-vue-preset-ts-app'
     },
     {
         type: 'list',
@@ -25,6 +25,6 @@ module.exports = [
                 value: 'ionic-vue-tabs'
             }
         ],
-        default: 'None'
+        default: 'ionic-vue-tabs'
     }
 ]
