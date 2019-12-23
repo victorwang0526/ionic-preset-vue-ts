@@ -1,0 +1,4 @@
+/release/android/*.apk
+/ionic-vue-preset-ts-app/ios
+/ionic-vue-preset-ts-app/android
+.idea
