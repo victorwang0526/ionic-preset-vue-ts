@@ -42,7 +42,7 @@ matrix:
     - npx cap add android
     - cd android
     - ./gradlew aR
-    - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -signedjar ../../release/android/env.global.APP_NAME-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
+    - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore ../../ivt.keystore -storepass ivtivt -signedjar ../../release/android/env.global.APP_NAME-release-signed.apk ./app/build/outputs/apk/release/app-release-unsigned.apk ivt.keystore
 env:
   global:
   - APP_NAME: ionic-vue-preset-ts-app
